@@ -1,0 +1,20 @@
+﻿<Window x:Class="BudgetApp.EditRecordWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Редактирование записи" Height="200" Width="300">
+    <StackPanel Margin="10">
+        <TextBlock Text="Название:" />
+        <TextBox Text="{Binding Name}" Margin="0,5" />
+
+        <TextBlock Text="Тип:" />
+        <TextBox Text="{Binding Type}" Margin="0,5" />
+
+        <TextBlock Text="Сумма:" />
+        <TextBox Text="{Binding Amount}" Margin="0,5" />
+
+        <CheckBox Content="Доход" IsChecked="{Binding IsIncome}" Margin="0,5" />
+
+        <Button Content="Сохранить" IsDefault="True" Margin="0,10,0,0" Click="SaveButton_Click" />
+        <Button Content="Отмена" IsCancel="True" Margin="0,5,0,0" Click="CancelButton_Click" />
+    </StackPanel>
+</Window>
